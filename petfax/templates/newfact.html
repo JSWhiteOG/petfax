@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    </head>
+    <body >
+        <div class="centered">
+            <h1>SUBMIT A FACT NOW</h1>
+            <form action="" method="post">
+            <label for="fact">Enter your fact here:</label>
+            <input type="text" id="fact" fact="fact">
+            <button type="submit" value="Submit">Submit</button>
+
+
+
+            </form>
+            
+        </div>
+        <div><a href="/facts"><h3>Return to Facts</h3></a></div>
+        <div><a href="/pets"><h3>Return to Pets</h3></a></div>
+    </body>
+</html>

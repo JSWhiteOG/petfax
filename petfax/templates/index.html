@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <h1>Welcome to PetFax</h1>
+        <div><a href="/facts"><h1>Click here to see some cool pet facts!</h1></a></div>
+        {% for pet in pets %}
+            <a href="/pets/{{pet.pet_id}}"><h2>{{ pet.pet_name }}</h2>
+                
+            <img src="{{ pet.pet_photo }}" height="300px" alt="Photo of pet"/></a>
+        {% endfor %}
+        
+    </body>
+    
+</html>
